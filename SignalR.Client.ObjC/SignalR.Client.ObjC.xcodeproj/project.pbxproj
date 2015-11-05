@@ -206,6 +206,8 @@
 		D05649BC1B7058FF00020B31 /* SRWebSocketTransportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D05649BA1B7058FF00020B31 /* SRWebSocketTransportTests.m */; };
 		D05649BE1B71441000020B31 /* SRLongPollingTransportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D05649BD1B71441000020B31 /* SRLongPollingTransportTests.m */; };
 		D05649BF1B71441000020B31 /* SRLongPollingTransportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D05649BD1B71441000020B31 /* SRLongPollingTransportTests.m */; };
+		D9F9EFA61BEB5C910069B63A /* SRLongPollingWithDataTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F9EFA41BEB5C910069B63A /* SRLongPollingWithDataTransport.h */; settings = {ASSET_TAGS = (); }; };
+		D9F9EFA71BEB5C910069B63A /* SRLongPollingWithDataTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F9EFA51BEB5C910069B63A /* SRLongPollingWithDataTransport.m */; settings = {ASSET_TAGS = (); }; };
 		E9DF4669057A778017D4BA5B /* libPods-SignalR.Samples.OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239E13DEE02640A8D5E2123 /* libPods-SignalR.Samples.OSX.a */; };
 /* End PBXBuildFile section */
 
@@ -370,6 +372,9 @@
 		D05649BA1B7058FF00020B31 /* SRWebSocketTransportTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocketTransportTests.m; sourceTree = "<group>"; };
 		D05649BD1B71441000020B31 /* SRLongPollingTransportTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRLongPollingTransportTests.m; sourceTree = "<group>"; };
 		D4DD276052EF756487797917 /* libPods-SignalR.Client.Tests.OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SignalR.Client.Tests.OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F9EFA41BEB5C910069B63A /* SRLongPollingWithDataTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRLongPollingWithDataTransport.h; sourceTree = "<group>"; };
+		D9F9EFA51BEB5C910069B63A /* SRLongPollingWithDataTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRLongPollingWithDataTransport.m; sourceTree = "<group>"; };
+		D9F9EFA81BEB60C20069B63A /* SRHttpBasedTransport_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHttpBasedTransport_Private.h; sourceTree = "<group>"; };
 		DD3F937EAD2A04B51B1F1AE5 /* libPods-SignalR.Client.iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SignalR.Client.iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB242D5EF8E1786500EAE628 /* libPods-SignalR.Client.OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SignalR.Client.OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79DBCE13A1EEBB4864E5E36 /* Pods-SignalR.Client.Tests.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalR.Client.Tests.iOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SignalR.Client.Tests.iOS/Pods-SignalR.Client.Tests.iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -654,10 +659,13 @@
 				3920785915AF13F6009B959E /* SRAutoTransport.m */,
 				3920785E15AF13F6009B959E /* SRLongPollingTransport.h */,
 				3920785F15AF13F6009B959E /* SRLongPollingTransport.m */,
+				D9F9EFA41BEB5C910069B63A /* SRLongPollingWithDataTransport.h */,
+				D9F9EFA51BEB5C910069B63A /* SRLongPollingWithDataTransport.m */,
 				3920786015AF13F6009B959E /* SRServerSentEventsTransport.h */,
 				3920786115AF13F6009B959E /* SRServerSentEventsTransport.m */,
 				39AF0D7C17138E3800E13E6E /* SRWebSocketTransport.h */,
 				39AF0D7D17138E3800E13E6E /* SRWebSocketTransport.m */,
+				D9F9EFA81BEB60C20069B63A /* SRHttpBasedTransport_Private.h */,
 			);
 			path = Transports;
 			sourceTree = "<group>";
@@ -853,6 +861,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F9EFA61BEB5C910069B63A /* SRLongPollingWithDataTransport.h in Headers */,
 				39EBAC2F16D072C900C6F359 /* SRHubProxyInterface.h in Headers */,
 				3920787A15AF13F6009B959E /* SRHubs.h in Headers */,
 				3920786E15AF13F6009B959E /* SRHubConnection.h in Headers */,
@@ -974,6 +983,7 @@
 				39E6FCD215C6BDC600434098 /* Resources */,
 				39E6FCD315C6BDC600434098 /* ShellScript */,
 				9DC2EB4DAEF87C59FF882FB5 /* Copy Pods Resources */,
+				07F53F7B349772102F27EEEA /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -995,6 +1005,7 @@
 				39E6FD1415C6BF4000434098 /* Resources */,
 				39E6FD1515C6BF4000434098 /* ShellScript */,
 				6EC1074B81D5D81279870B7F /* Copy Pods Resources */,
+				4C2C135B5141CB20CBBC7A22 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1083,6 +1094,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07F53F7B349772102F27EEEA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SignalR.Client.Tests.OSX/Pods-SignalR.Client.Tests.OSX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		243B716003BCEC866DAFE607 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1136,6 +1162,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		4C2C135B5141CB20CBBC7A22 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SignalR.Client.Tests.iOS/Pods-SignalR.Client.Tests.iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		5E58010E027C503BCB2DC2B1 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1298,6 +1339,7 @@
 				3920787E15AF13F6009B959E /* SRSubscription.m in Sources */,
 				3920788215AF13F6009B959E /* NSObject+SRJSON.m in Sources */,
 				3920788915AF13F6009B959E /* SRExceptionHelper.m in Sources */,
+				D9F9EFA71BEB5C910069B63A /* SRLongPollingWithDataTransport.m in Sources */,
 				3920788E15AF13F6009B959E /* SRVersion.m in Sources */,
 				3920789115AF13F6009B959E /* SRConnection.m in Sources */,
 				3920789415AF13F6009B959E /* SRNegotiationResponse.m in Sources */,
